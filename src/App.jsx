@@ -6,6 +6,7 @@ import todo from './assets/todo.png'
 import detection from './assets/detection.png'
 import ecom from './assets/ecom.png'
 import portfolio from './assets/portfolio.png'
+import bk from './assets/bk.png'
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -71,10 +72,18 @@ function App() {
     },
     {
       name: "My Portfolio",
-      description: "A personal portfolio showcasing my web development skills, including various projects built with modern technologies like React, Node.js, and TailwindCSS.",
+      description: "A personal portfolio showcasing my web development skills, including various projects built with modern technologies.",
       image: portfolio,
       github: "https://github.com/Adel-Oulhaci/My-Portfolio",
       preview: "https://adel-oulhaci.netlify.app",
+      tags: ["React", "Node.js", "TailwindCSS"]
+    },
+    {
+      name: "Badrat Khayr Club",
+      description: "Badrat Khayr Club is a website for our university club, showcasing its activities, events, and achievements.",
+      image: portfolio,
+      github: "https://github.com/Adel-Oulhaci/bk",
+      preview: "https://badratkhayr.netlify.app",
       tags: ["React", "Node.js", "TailwindCSS"]
     }
   ];
