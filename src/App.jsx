@@ -35,7 +35,7 @@ function App() {
       })
       .then(
         () => {
-          setMessage('Email sent successfully!');
+          setMessage('Email sent successfully!'); 
           form.current.reset(); 
         },
         (error) => {
