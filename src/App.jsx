@@ -81,7 +81,7 @@ function App() {
     {
       name: "Badrat Khayr Club",
       description: "Badrat Khayr Club is a website for our university club, showcasing its activities, events, and achievements.",
-      image: portfolio,
+      image: bk,
       github: "https://github.com/Adel-Oulhaci/bk",
       preview: "https://badratkhayr.netlify.app",
       tags: ["React", "Node.js", "TailwindCSS"]
