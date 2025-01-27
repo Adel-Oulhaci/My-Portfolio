@@ -38,7 +38,7 @@ function App() {
           setMessage('Email sent successfully!'); 
           form.current.reset(); 
         },
-        (error) => {
+        (error) => {c
           setMessage('Failed to send email: ' + error.text);
         },
       );
