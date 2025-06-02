@@ -18,9 +18,13 @@ function App() {
     if (darkMode) {
       document.documentElement.classList.add('dark');
       localStorage.setItem('theme', 'dark');
+      // Update manifest theme color for dark mode
+      document.querySelector('link[rel="manifest"]').href = '/manifest-dark.json';
     } else {
       document.documentElement.classList.remove('dark');
       localStorage.setItem('theme', 'light');
+      // Update manifest theme color for light mode
+      document.querySelector('link[rel="manifest"]').href = '/manifest.json';
     }
   }, [darkMode]);
 
@@ -39,7 +43,7 @@ function App() {
           setMessage('Email sent successfully!'); 
           form.current.reset(); 
         },
-        (error) => {c
+        (error) => {
           setMessage('Failed to send email: ' + error.text);
         },
       );
@@ -144,9 +148,9 @@ function App() {
               className="w-32 h-32 mx-auto mb-8"
             >
               <img
-                src={`https://github.com/Adel-Oulhaci.png`}
+                src="/my logo.png"
                 alt="Profile"
-                className="w-full h-full rounded-full border-4 border-blue-500 shadow-lg"
+                className={`w-full h-full rounded-full border-4 ${darkMode ? 'border-blue-400 brightness-90' : 'border-blue-500'} shadow-lg transition-all duration-300`}
               />
             </motion.div>
 
