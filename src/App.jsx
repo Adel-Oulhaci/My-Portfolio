@@ -18,12 +18,10 @@ function App() {
     if (darkMode) {
       document.documentElement.classList.add('dark');
       localStorage.setItem('theme', 'dark');
-      // Update manifest theme color for dark mode
       document.querySelector('link[rel="manifest"]').href = '/manifest-dark.json';
     } else {
       document.documentElement.classList.remove('dark');
       localStorage.setItem('theme', 'light');
-      // Update manifest theme color for light mode
       document.querySelector('link[rel="manifest"]').href = '/manifest.json';
     }
   }, [darkMode]);
@@ -109,6 +107,21 @@ function App() {
 
   return (
     <div className={`min-h-screen ${darkMode ? 'dark bg-gray-900' : 'bg-gray-50'} transition-colors duration-300`}>
+      {/* Logo in top-left corner */}
+      <motion.div
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
+        className="fixed top-4 left-4 z-50"
+      >
+        <div className="w-12 h-12 bg-white dark:bg-gray-800 rounded-full p-1 shadow-lg">
+          <img
+            src="/my logo.png"
+            alt="Logo"
+            className="w-full h-full object-contain"
+          />
+        </div>
+      </motion.div>
+
       {/* Theme Toggle Button */}
       <motion.button
         initial={{ opacity: 0 }}
@@ -148,7 +161,7 @@ function App() {
               className="w-32 h-32 mx-auto mb-8"
             >
               <img
-                src="/my logo.png"
+                src="https://github.com/Adel-Oulhaci.png"
                 alt="Profile"
                 className={`w-full h-full rounded-full border-4 ${darkMode ? 'border-blue-400 brightness-90' : 'border-blue-500'} shadow-lg transition-all duration-300`}
               />
