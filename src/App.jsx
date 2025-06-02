@@ -113,7 +113,7 @@ function App() {
         animate={{ opacity: 1, x: 0 }}
         className="fixed top-4 left-4 z-50"
       >
-        <div className="w-12 h-12 bg-white dark:bg-gray-800 rounded-full p-1 shadow-lg">
+        <div className="w-12 h-12 bg-white dark:bg-gray-800 rounded-full p-4 shadow-lg">
           <img
             src="/my logo.png"
             alt="Logo"
